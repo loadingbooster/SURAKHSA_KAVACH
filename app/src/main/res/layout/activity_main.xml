@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainactivitylayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:background="#90EE90"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/accdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-----"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/speeddata"
+        android:layout_width="wrap_content"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/accdata"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/black"
+        android:text="GPS signal not found"
+        />
+    <TextView
+        android:id="@+id/latitudelabel"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/speeddata"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="-----"
+        />
+    <TextView
+        android:id="@+id/longitudelabel"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/latitudelabel"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginBottom="50dp"
+        android:text="-----"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/longitudelabel"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_baseline_add_alert_24" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:text="Everyone Safe" />
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:text="Log Out" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/black"
+        android:layout_below="@id/logout"
+        android:text="Simulate accident" />
+
+</RelativeLayout>
